@@ -4,7 +4,7 @@
     <div class="btn" @click="$router.push('/mixin')">goMixin</div> 
     <div class="btn" @click="$router.push('/plugin')">goPlugin</div> 
     <div class="btn" @click="$router.push('/store')">goStore</div> 
-
+    <div class="btn" @click="$router.push('/directive')">goDirective</div> 
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>

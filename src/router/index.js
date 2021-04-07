@@ -5,6 +5,8 @@ const slot = ()=>import(/* webpackChunkName: "slot" */ '../views/slot.vue')
 const mixin = ()=>import(/* webpackChunkName: "mixin" */ '../views/mixin.vue')
 const plugin = ()=>import(/* webpackChunkName: "plugin" */ '../views/plugin.vue')
 const store = ()=>import(/* webpackChunkName: "about" */ '../views/store.vue')
+const directive = ()=>import(/* webpackChunkName: "about" */ '../views/directive.vue')
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -43,6 +45,11 @@ const routes = [
     path: '/store',
     name: 'store',
     component: store
+  },
+  {
+    path: '/directive',
+    name: 'directive',
+    component: directive
   }
 ]
 
