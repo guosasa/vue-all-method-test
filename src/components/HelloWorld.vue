@@ -3,6 +3,13 @@
     {{$data}}
     {{$store.state}}
     <h1 @click=setNum>{{ msg }}</h1>
+    <button-new>
+      <template v-slot:default="slotProps">
+        <div>我是第一种作用域插槽-------{{slotProps}}</div> 
+      </template>
+      
+      <template #header>我是命名插槽</template>
+    </button-new>
     <p>
       {{count}}
       For a guide and recipes on how to configure / customize this project,<br>
@@ -40,6 +47,7 @@
 <script>
 import { mapState } from 'vuex'
 import mixin from '../mixins/getName.js'
+import buttonNew from './button.vue'
 export default {
   name: 'HelloWorld',
   mixins:[mixin],
@@ -63,6 +71,9 @@ export default {
     ...mapState({
       count:state=>state.num
     })
+  },
+  components:{
+    buttonNew
   }
 }
 </script>
