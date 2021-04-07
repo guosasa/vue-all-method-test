@@ -5,6 +5,7 @@ import store from './store'
 import plugin from './plugins/plugin.js'
 Vue.config.productionTip = false
 plugin()
+require('./assets/css/index.less')
 new Vue({
   router,
   store,

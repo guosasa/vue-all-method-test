@@ -16,10 +16,11 @@ export default {
         document.getElementsByTagName('body')[0].appendChild($vm.$el)
       },
       hide(){
-        $vm.$destory()
+        $vm.$destroy()
         document.getElementsByTagName('body')[0].removeChild($vm.$el)
       }
     }
+
   },
   
 }

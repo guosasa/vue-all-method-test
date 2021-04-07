@@ -1,6 +1,10 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <div class="btn" @click="$router.push('/slot')">goSlot</div> 
+    <div class="btn" @click="$router.push('/mixin')">goMixin</div> 
+    <div class="btn" @click="$router.push('/plugin')">goPlugin</div> 
+    <div class="btn" @click="$router.push('/store')">goStore</div> 
+
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>

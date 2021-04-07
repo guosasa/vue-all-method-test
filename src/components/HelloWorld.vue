@@ -1,17 +1,6 @@
 <template>
   <div class="hello">
-    {{$data}}
-    {{$store.state}}
-    <h1 @click=setNum>{{ msg }}</h1>
-    <button-new>
-      <template v-slot:default="slotProps">
-        <div>我是第一种作用域插槽-------{{slotProps}}</div> 
-      </template>
-      
-      <template #header>我是命名插槽</template>
-    </button-new>
     <p>
-      {{count}}
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
@@ -45,36 +34,20 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import mixin from '../mixins/getName.js'
-import buttonNew from './button.vue'
+
+
 export default {
   name: 'HelloWorld',
-  mixins:[mixin],
   props: {
     msg: String
   },
   methods: {
-    getName1(){
-      this.$store.dispatch('getName')
-    },
-    setNum(){
-      this.$store.commit('add')
-    }
+    
   },
   mounted() {
-    this.getName1()
-    this.getMessage()
-    this.$dialog.show("gs")
+  
   },
-  computed:{
-    ...mapState({
-      count:state=>state.num
-    })
-  },
-  components:{
-    buttonNew
-  }
+ 
 }
 </script>
 
