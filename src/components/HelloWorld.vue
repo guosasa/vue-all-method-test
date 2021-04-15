@@ -1,5 +1,9 @@
 <template>
-  <div class="hello">
+  <div class="hello" v-scroll>
+
+     <div class="message" v-update1>
+      {{ content }}
+    </div>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -30,6 +34,7 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <input v-model="username">
   </div>
 </template>
 
@@ -41,12 +46,28 @@ export default {
   props: {
     msg: String
   },
+  data() {
+    return {
+      username:'',
+      content:""
+    }
+  },
   methods: {
     
   },
   mounted() {
   
   },
+  directives:{
+    scroll:{
+      bind(el){
+        window.addEventListener('scroll',(e)=>{
+          console.log(e)
+        })
+      
+      }
+    }
+  }
  
 }
 </script>
