@@ -3,7 +3,7 @@
     <h2>我是slot组件</h2>
     <slot :data="name"></slot>
     <div class="top">
-      <slot name="header"></slot>
+      <slot name="header" :data="name"></slot>
     </div>
     
   </div>

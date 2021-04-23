@@ -5,7 +5,7 @@
         <div>我是第一种作用域插槽-------{{slotProps}}</div> 
       </template>
       
-      <template #header>我是命名插槽</template>
+      <template #header="headerProps">我是命名插槽 {{headerProps}}</template>
     </button-new>
     
   </div>
